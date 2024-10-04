@@ -1,0 +1,10 @@
+services:
+  ynab-bank-import:
+    container_name: ynab-bank-import
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./traces:/app/traces
+    env_file: .env
+    restart: no
